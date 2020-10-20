@@ -6,21 +6,38 @@ namespace FindMaximumNumber
 {
     public class Generic<T> where T:IComparable
     {
-        public static T MaximumNumber(T firstValue, T secondValue, T thirdValue)
+        public T[] value;
+        public Generic(T[] value)
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-            {
-                return firstValue;
-            }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
-            {
-                return secondValue;
-            }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
-            {
-                return thirdValue;
-            }
-            return firstValue;
+            this.value = value;
+        }
+
+        public T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+        void add(params int[] a)
+        {
+
+        }
+        public T MaxValue(params T[] values)
+        {
+            var sorted_values = Sort(values);
+
+            return sorted_values[sorted_values.Length - 1];
+        }
+
+        public T MaxMethod()
+        {
+            var max = MaxValue(this.value);
+            return max;
+        }
+
+        public void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("Maximum value is " + max);
         }
     }
 }

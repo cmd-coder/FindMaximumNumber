@@ -6,17 +6,15 @@ namespace FindMaximumNumber
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Integer Checking. Find max Number. Numbers are: 11, 22 and 33.");
-            int outputInteger = Generic<int>.MaximumNumber(11, 22, 33);
-            Console.WriteLine(outputInteger);
-
-            Console.WriteLine("Float Number Checking. Find max Number. Numbers are: 11.1, 22.2 and 33.3.");
-            float outputFloat = Generic<float>.MaximumNumber(11.1f, 22.2f, 33.3f);
-            Console.WriteLine(outputFloat);
-
-            Console.WriteLine("Float Number Checking. Find max Number. Numbers are: \"11\", \"22\" and \"33\".");
-            string outputString=Generic<string>.MaximumNumber("11", "22", "33");
-            Console.WriteLine(outputString);
+            int[] intArray = { 112, 344, 432, 555, 678 };
+            Generic<int> generic = new Generic<int>(intArray);
+            generic.PrintMaxValue();
+            double[] doubleArray = { 11.2, 34.4, 4.32, 55.5, 6.78 };
+            Generic<double> genericDouble = new Generic<double>(doubleArray);
+            genericDouble.PrintMaxValue();
+            string[] stringArray = { "111", "222", "333", "55", "999" };
+            Generic<string> genericString = new Generic<string>(stringArray);
+            genericString.PrintMaxValue();
         }
     }
 }
