@@ -4,9 +4,9 @@ using System.Text;
 
 namespace FindMaximumNumber
 {
-    public class Generic
+    public class Generic<T> where T:IComparable
     {
-        public static T MaximumNumber<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable
+        public static T MaximumNumber(T firstValue, T secondValue, T thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
             {

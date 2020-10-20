@@ -44,7 +44,7 @@ namespace UnitTestProject1
         [DataRow(5, 2, 1, 5)]
         public void MaximumNumberGenericInteger_PassThreeNumbers_ReturnMaximumNumber(int a, int b, int c, int max)
         {
-            int result = MaximumNumberCheck.MaximumIntegerNumber(a, b, c);
+            int result = Generic<int>.MaximumNumber(a, b, c);
             Assert.AreEqual(result, max);
         }
 
@@ -54,7 +54,7 @@ namespace UnitTestProject1
         [DataRow(5.5f, 2.2f, 1.1f, 5.5f)]
         public void MaximumNumberGenericFloat_PassThreeNumbers_ReturnMaximumNumber(float a, float b, float c, float max)
         {
-            float result = Generic.MaximumNumber<float>(a, b, c);
+            float result = Generic<float>.MaximumNumber(a, b, c);
             Assert.AreEqual(result, max);
         }
 
@@ -64,7 +64,7 @@ namespace UnitTestProject1
         [DataRow("5", "2", "1", "5")]
         public void MaximumNumberGenericString_PassThreeNumbers_ReturnMaximumNumber(string a, string b, string c, string max)
         {
-            string result = Generic.MaximumNumber<string>(a, b, c);
+            string result = Generic<string>.MaximumNumber(a, b, c);
             Assert.AreEqual(result, max);
         }
     }
