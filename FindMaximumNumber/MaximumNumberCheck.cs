@@ -6,7 +6,6 @@ namespace FindMaximumNumber
 {
     public class MaximumNumberCheck
     {
-
         public static int MaximumIntegerNumber(int firstValue, int secondValue, int thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
@@ -21,7 +20,7 @@ namespace FindMaximumNumber
             {
                 return thirdValue;
             }
-            throw new Exception("firstNumber,secondNumber and thirdNumber are same");
+            return firstValue;
         }
     }
 }
