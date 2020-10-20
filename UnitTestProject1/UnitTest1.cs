@@ -25,5 +25,15 @@ namespace UnitTestProject1
             float result = MaximumNumberCheck.MaximumFloatNumber(a, b, c);
             Assert.AreEqual(result, max);
         }
+
+        [TestMethod]
+        [DataRow("1", "2", "3", "3")]
+        [DataRow("1", "4", "2", "4")]
+        [DataRow("5", "2", "1", "5")]
+        public void MaximumStringNumber_PassThreeNumbers_ReturnMaximumNumber(string a, string b, string c, string max)
+        {
+            string result = MaximumNumberCheck.MaximumStringNumber(a, b, c);
+            Assert.AreEqual(result, max);
+        }
     }
 }
